@@ -26,8 +26,8 @@
             <img class="user__image" src="" alt="" />
           </div>
           <div class="user__logout hidden">
-            <h2 class="user__uniquename text3 bolder"></h2>
-            <button class="text4 logout__button">
+          <h2 class="user__uniquename text3 bolder" usernameH2></h2>
+            <button id="account__leave" class="text4 logout__button">
               <div class="logout__icon"></div>
               Sair da conta
             </button>
@@ -39,9 +39,35 @@
       <h1 class="feed__title text2 bolder">Feed</h1>
 
       <!-- POSTS -->
-      <section class="posts">
+      <section id="area_posts" class="posts">
         <!-- Aqui serão renderizados os posts -->
+        
       </section>
+
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Modal</h2>
+            <label for="title">Título:</label>
+            <input type="text" id="title">
+            <label for="content">Texto:</label>
+            <input type="text" id="content">
+            <button id="saveBtn">Salvar</button>
+            <button id="cancelBtn">Cancelar</button>
+        </div>
+    </div>
+
+
+    <!-- <form id="postForm">
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title">
+      <br>
+      <label for="content">Conteúdo:</label>
+      <textarea id="content" name="content"></textarea>
+      <br>
+      <button type="submit">Enviar</button>
+  </form> -->
     </main>
   </body>
 </html>

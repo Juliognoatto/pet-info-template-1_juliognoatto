@@ -1,6 +1,34 @@
 import { getCurrentUserInfo, getAllPosts } from "./requests.js";
-
 // Renderiza todos os posts
+
+// export async function renderAllPosts() {
+//   const postSection = document.querySelector(".posts");
+
+//   const getAllPosts = async () => {
+//     const request = await fetch(`http://localhost:3333/posts`, {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: `Bearer ${token}`,
+//       },
+//     })
+//     const posts = await request.json()
+//     .then((response) => {
+//       if(response.ok) {
+//         posts.forEach(async (post) => {
+//           const postArticle = await renderPost(post, true);
+//           postSection.appendChild(postArticle);
+//         });
+//       } else {
+//         console.log('erro')
+//       }
+//     })
+  
+//   }
+//   getAllPosts()
+// }
+
+
 export async function renderAllPosts() {
   const postSection = document.querySelector(".posts");
   postSection.innerHTML = "";
@@ -10,7 +38,14 @@ export async function renderAllPosts() {
     const postArticle = await renderPost(post, true);
     postSection.appendChild(postArticle);
   });
+
+  // for (let i = 0; i < posts.length; i++) {
+  //   const post = posts[i];
+  //   await renderPost(post, true);
+  // }
 }
+
+
 
 // Renderiza um post
 async function renderPost(post) {
